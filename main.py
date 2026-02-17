@@ -36,10 +36,7 @@ def is_night():
     time_now = datetime.now().hour
     if time_now >= sunset or time_now <= sunrise :
         return  True
-# If the ISS is close to my current position
-#  and it is currently dark
-# Then send me a mail to tell me to look up.
-# BONUS : run the code every 60 seconds
+
 
 while True:
     time.sleep(60)
@@ -49,3 +46,4 @@ while True:
             connection.starttls()
             connection.login(MY_MAIL, MY_PASSWORD)
             connection.sendmail(from_addr=MY_MAIL, to_addrs="darshil.25.sharma@gmail.com", msg="subject: LOOK UP 👆👆")
+
